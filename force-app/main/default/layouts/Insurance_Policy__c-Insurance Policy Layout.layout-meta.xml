@@ -27,6 +27,10 @@
                 <behavior>Edit</behavior>
                 <field>Premium_Frequency__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_Premium_Paid_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
