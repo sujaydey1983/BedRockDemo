@@ -12,7 +12,7 @@ public class PolicyBulkUpdate implements Database.Batchable<sObject>,Database.St
             if(ip.Expiration_Date__c < today){
                 ip.Status__c = 'Terminated';
                 ips.add(ip);
-                policyIds.add(ip.Id);
+                policyIds.add(ip.Id);//Comment
             }
         }
         update ips;
