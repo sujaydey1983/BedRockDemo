@@ -1,0 +1,73 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Insurance_Policy__c",
+                "referenceId": "Insurance_Policy__cRef1"
+            },
+            "Name": "4000000570",
+            "Effective_Date__c": "2023-04-04",
+            "Expiration_Date__c": "2024-04-04",
+            "Issuing_Date__c": "2023-04-04",
+            "Premium__c": 1000000,
+            "Premium_Frequency__c": "Yearly",
+            "Status__c": "Active",
+            "Account__c": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Insurance_Policy__c",
+                "referenceId": "Insurance_Policy__cRef2"
+            },
+            "Name": "4000000572",
+            "Issuing_Date__c": "2023-07-04",
+            "Premium__c": 1000000,
+            "Premium_Frequency__c": "Yearly",
+            "Status__c": "Issued",
+            "Account__c": "@AccountRef2"
+        },
+        {
+            "attributes": {
+                "type": "Insurance_Policy__c",
+                "referenceId": "Insurance_Policy__cRef3"
+            },
+            "Name": "4000000573",
+            "Effective_Date__c": "2023-04-04",
+            "Expiration_Date__c": "2024-04-04",
+            "Issuing_Date__c": "2023-04-04",
+            "Premium__c": 1000000,
+            "Premium_Frequency__c": "Yearly",
+            "Status__c": "Active",
+            "Account__c": "@AccountRef3"
+        },
+        {
+            "attributes": {
+                "type": "Insurance_Policy__c",
+                "referenceId": "Insurance_Policy__cRef4"
+            },
+            "Name": "4000000574",
+            "Effective_Date__c": "2023-04-04",
+            "Expiration_Date__c": "2024-04-04",
+            "Issuing_Date__c": "2023-04-04",
+            "Premium__c": 1000000,
+            "Premium_Frequency__c": "Yearly",
+            "Status__c": "Active",
+            "Account__c": "@AccountRef4"
+        },
+        {
+            "attributes": {
+                "type": "Insurance_Policy__c",
+                "referenceId": "Insurance_Policy__cRef5"
+            },
+            "Name": "4000000575",
+            "Effective_Date__c": "2022-01-02",
+            "Expiration_Date__c": "2023-01-02",
+            "Issuing_Date__c": "2022-01-01",
+            "Premium__c": 5000000,
+            "Premium_Frequency__c": "Yearly",
+            "Status__c": "Terminated",
+            "Account__c": "@AccountRef5"
+        }
+        
+    ]
+}
