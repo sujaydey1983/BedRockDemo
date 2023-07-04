@@ -29,7 +29,7 @@ public class PolicyBulkUpdate implements Database.Batchable<sObject>,Database.St
                 mail.setToAddresses(new List<string>{ip.contact_email__c});
                 mail.setSubject('Your Policy ' + ip.name + 'has be expired');
                 mail.setPlainTextBody('Your Policy ' + ip.name + 'has be expired');
-                mails.add(mail);
+                mails.add(mail);//Sending email
             }
 			Messaging.sendEmail(mails);
         }
