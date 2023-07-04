@@ -12,7 +12,7 @@ public class PolicyBulkUpdate implements Database.Batchable<sObject>,Database.St
             if(ip.Expiration_Date__c < today){
                 ip.Status__c = 'Terminated';
                 ips.add(ip);
-                policyIds.add(ip.Id);//Comment
+                policyIds.add(ip.Id);
             }
         }
         update ips;
@@ -29,7 +29,7 @@ public class PolicyBulkUpdate implements Database.Batchable<sObject>,Database.St
                 mail.setToAddresses(new List<string>{ip.contact_email__c});
                 mail.setSubject('Your Policy ' + ip.name + 'has be expired');
                 mail.setPlainTextBody('Your Policy ' + ip.name + 'has be expired');
-                mails.add(mail);//Sending email 
+                mails.add(mail);
             }
 			Messaging.sendEmail(mails);
         }
