@@ -2,8 +2,6 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   push:
-    paths:
-      - 'force-app/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -39,8 +37,12 @@ jobs:
           sfdx force --help
 
       - name: Authenticate Salesforce ORG
+        env:
+          SFDX_JWT_KEY: ${{ secrets.SFDX_JWT_KEY }}
+          SFDX_CLIENT_ID: ${{ secrets.SFDX_CLIENT_ID }}
         run: |
-          sfdx force:auth:jwt:grant -i 3MVG9wt4IL4O5wvK6cMKqZscNC_VJvyQ7M6fKbJ1C_GDTEIdE1ZoCLa7z2z91JxTYiTIkpxhycP.h5oLjAv0A -f server.key  --username sujay.dey@curious-wolf-arduiq.com -r https://login.salesforce.com      
+          echo "${SFDX_JWT_KEY}" > server.key
+          sfdx force:auth:jwt:grant -i "${SFDX_CLIENT_ID}" -f server.key  --username sujay.dey@curious-wolf-arduiq.com -r https://login.salesforce.com      
       - name: Validate Source Code Against Salesforce ORG
         run: |
           sfdx force:source:deploy -p force-app -u sujay.dey@curious-wolf-arduiq.com
