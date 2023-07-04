@@ -41,8 +41,6 @@ jobs:
           SFDX_JWT_KEY: ${{ secrets.SFDX_JWT_KEY }}
           SFDX_CLIENT_ID: ${{ secrets.SFDX_CLIENT_ID }}
         run: |
-         - run: echo "Client Id ->> ${{ secrets.SFDX_JWT_KEY }}."
-         - run: echo "Client Id ->> ${{ secrets.SFDX_CLIENT_ID }}."
          echo "${SFDX_JWT_KEY}" > server.key
           sfdx force:auth:jwt:grant -i "${SFDX_CLIENT_ID}" -f server.key  --username sujay.dey@curious-wolf-arduiq.com -r https://login.salesforce.com      
       - name: Validate Source Code Against Salesforce ORG
